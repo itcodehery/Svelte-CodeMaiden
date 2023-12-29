@@ -1,5 +1,5 @@
 <script>
-	import Nested from './Nested.svelte';
+	import Nested from './nested.svelte';
 	let count = 0;
 	$: doubled = count * 2; //reruns this line when count changes
 	$: if(count >= 10) {
@@ -7,10 +7,23 @@
 		count = 9;
 	}
 
+	import Packageinfo from './packageinfo.svelte';
+
+	const pkg = {
+		name: 'svelte',
+		version: 3,
+		speed: 'blazing',
+		website: 'https://svelte.dev'
+	};
+
 	let numbers = [1, 2, 3, 4];
 
 	function addNumber() {
 		numbers = [...numbers, numbers.length + 1];
+	}
+
+	function subNumber(){
+		numbers = numbers.slice(0, numbers.length - 1);
 	}
 
 	$: sum = numbers.reduce((total, currentNumber) => total + currentNumber, 0);
@@ -40,6 +53,18 @@
 	Add number
 </button>
 
+<button on:click={subNumber}>
+	Subtract number
+</button>
+
 <hr>
 <Nested answer={42}/>
 <Nested/>
+
+<Packageinfo {...pkg}/> 
+
+<!--I'm putting the pkg object in here, and it's being spread out into the props of the Packageinfo component-->
+
+<button on:click={() => {}}>
+	Next
+</button>
