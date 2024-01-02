@@ -1,0 +1,76 @@
+<script>
+    import logo from '../lib/images/logo.png'
+    function joinUsClick() {
+        window.open("https://tally.so/r/3qRxa5", "_blank");
+    }
+</script>
+<style>
+    .app-bar {
+        position: fixed;
+        top: 5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0,0,0,0.5);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        background-image: url('../lib/images/secondaryCardbg.png');
+        background-size: 20in;
+        background-position: right;
+        color: #b3e02b;
+        align-self: center;
+        width: 60%;
+        height: 18px;
+        padding: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between  ;
+        border-radius: 8px;
+        border: #d4ea9948 1px solid;
+        z-index: 1;
+    }
+
+    .container {
+        display: flex;
+        gap: 10px;
+    }
+
+    .primary-button {
+    margin-left: auto;
+    background-color: rgba(191, 255, 0, 0.65);
+    color: #1c3700;
+    text-transform: capitalize;
+    font-family: 'SF Pro Display';
+    font-weight: bold;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .secondary-button {
+    margin-left: auto;
+    background-color: transparent;
+    color: #b3e02b;
+    text-transform: capitalize;
+    font-family: 'SF Pro Display';
+    font-weight: 600px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .app-bar button:hover {
+    background-color: #1c3700;
+    color: #B3E02B;
+  }
+</style>
+
+<header class="app-bar">
+    <img src="{logo}" alt="logo" width="42px" height="42px"/>
+    <div class = "container">
+        <button class="secondary-button">Contact</button>
+        <button class="secondary-button">Members</button>
+        <button class="primary-button" on:click={joinUsClick} target="_blank">Join Us</button>
+    </div>
+</header>

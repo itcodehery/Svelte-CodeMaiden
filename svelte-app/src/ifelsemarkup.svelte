@@ -33,3 +33,5 @@
         <p style="color: {color}">{i}: {color}</p>
     {/each}
 </div>
+
+<input bind:value={count}/>

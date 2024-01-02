@@ -18,6 +18,11 @@
 
 	let numbers = [1, 2, 3, 4];
 
+	//heres the navigate method
+	import navigate from 'svelte-routing';
+
+
+
 	function addNumber() {
 		numbers = [...numbers, numbers.length + 1];
 	}
@@ -64,7 +69,7 @@
 <Packageinfo {...pkg}/> 
 
 <!--I'm putting the pkg object in here, and it's being spread out into the props of the Packageinfo component-->
-
-<button on:click={() => {}}>
+<!--The next button leads to the ifelsemarkup page-->
+<button on:click={() => navigate('')}>
 	Next
 </button>
