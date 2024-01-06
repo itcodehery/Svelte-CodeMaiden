@@ -16,7 +16,7 @@
         top: 5%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-color: rgba(0,0,0,0.5);
+        background-color: rgba(0,0,0,0.2);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         background-image: url('../lib/images/secondaryCardbg.png');
@@ -61,8 +61,8 @@
   }
 
   .inputbar {
-    background-color: rgba(40, 53, 0, 0.749);
-    color: #607818;
+    background-color: rgba(40, 53, 0, 0.5);
+    color: #87aa1d;
     text-transform: capitalize;
     font-family: 'SF Pro Display';
     font-weight: 600px;

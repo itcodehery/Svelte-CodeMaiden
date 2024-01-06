@@ -1,22 +1,53 @@
 <script>
-    import AppBar from "../../components/AppBar.svelte";
-
-    export let contacts = [
-        { name: "Admin 1", email: "admin1@example.com" },
-        { name: "Admin 2", email: "admin2@example.com" }
-    ];
+import AppBar from "../../components/AppBar.svelte";
+import Footer from "../../components/footer.svelte";
+let name = "world";
+export let contacts = [{
+        name: "Hari",
+        email: "haririo321@gmail.com"
+    },
+    {
+        name: "Vaibhav",
+        email: "vaibhavmurugendra@gmail.com"
+    }
+];
 </script>
 
-<body>
-<AppBar/>
-<h1>Contact Page</h1>
+<style>
+@import '../../font-import.css';
 
-<h2>Admin Contacts:</h2>
-<ul>
-    {#each contacts as contact}
-        <li>
-            <strong>{contact.name}:</strong> {contact.email}
-        </li>
-    {/each}
-</ul>
-</body>
+hr {
+    width: 30%;
+    color: rgba(255, 255, 255, 0.111);
+}
+
+.container {
+    background-color: #B3E02B;
+    background-image: url('../../lib/images/primaryCardbg.png');
+    background-size: cover;
+    color: #000;
+    align-self: center;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 8px;
+    justify-content: center;
+}
+</style>
+
+<body>
+    <AppBar bind:search="{name}"/>
+        <div style="height: 65px;">
+
+        </div>
+        <div  class="container">
+            <h1>Contact Us</h1>
+            {#each contacts as contact}
+            <strong>{contact.name}:</strong> <a href="{contact.email}">{contact.email}</a>
+            <div style="height: 20px;"></div>
+            {/each}
+        </div>
+        <hr/>
+        <Footer/>
+            </body>
