@@ -1,10 +1,9 @@
 <script>
-    export let mainText;
-    export let subText;
-    import header from '../lib/images/header.png'
+    export let number;
+    export let text;
 </script>
 <style>
-    .tertiary-card {
+    .number-card {
         background-color: #242d09;
         color: #b8ff5a;
         align-self: center;
@@ -18,23 +17,19 @@
         flex-direction: row-reverse;
     }
 
-    .tertiary-card h1 {
+    .number-card h1 {
         margin: 0;
         font-size: 32px;
     }
 
-    .tertiary-card p {
+    .number-card p {
         word-wrap: break-word;
         max-width: 400px;
     }
 </style>
-<div class="tertiary-card">
+<div class="number-card">
     <div>
-        <h1>{mainText}</h1>
-        <p>{subText}</p>
+        <h1>{number}</h1>
+        <p>{text}</p>
     </div>
-    <div>
-        <img src="{header}" alt="logo" width="555px" height="222px"/>
-    </div>
-    
 </div>

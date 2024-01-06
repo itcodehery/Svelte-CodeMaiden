@@ -3,7 +3,8 @@
     import MainCard from "../components/mainCard.svelte";
     import SecondaryCard from "../components/secondaryCard.svelte";
     import TertiaryCard from "../components/tertiaryCard.svelte";
-    import cardbg from "../lib/images/primaryCardbg.png";
+
+    let name = "World";
 </script>
 <style>
     @import '../font-import.css';
@@ -12,36 +13,29 @@
         color: rgba(255, 255, 255, 0.111);
     }
 
-    /* .banner {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    } */
-
     
 </style>
 <body>
 
-    <AppBar/>
+    <AppBar showNameBar="{true}"  bind:search={name}/>
     <div style="height: 50px;">
 
     </div>
     <hr/>
     <MainCard 
-    mainText="The Vox Technologia Collective" 
+    mainText="Hello {name}! We are the Vox Technologia Collective" 
     subText="A coder community of college students based in Bangalore, India!"/>
     <hr/>
-    <SecondaryCard
+    <div style="flex-direction: row;">
+        <SecondaryCard
         imagePath = "/images/logo-opac.png"
         mainText = "What is this?"
         subText = "Hey, we are Hari and Vaibhav, the founders of the tech Collective.
         We would like to provide an opportunity to students who are interested 
        in joining a Coding and Tech community of college students around 
        Bangalore, India. We're looking for new people and recruits to join us."/>
+    </div>
     <hr/>
-    <!-- <div class="banner">
-        <img src="{cardbg}" alt="logo" width="555px" height="222px"/>
-    </div> -->
     <TertiaryCard
         imagePath = "/images/logo-opac.png"
         mainText = "This is for you if:"

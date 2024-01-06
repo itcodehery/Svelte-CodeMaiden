@@ -1,7 +1,13 @@
 <script>
     import logo from '../lib/images/logo.png'
+    export let search;
+    export let showNameBar = false;
     function joinUsClick() {
         window.open("https://tally.so/r/3qRxa5", "_blank");
+    }
+
+    function homeClick() {
+        window.open("", "_blank");
     }
 </script>
 <style>
@@ -31,7 +37,14 @@
 
     .container {
         display: flex;
+        align-items: center;
         gap: 10px;
+    }
+
+    .app-bar .container a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
     }
 
     .primary-button {
@@ -45,6 +58,20 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
+  }
+
+  .inputbar {
+    background-color: rgba(40, 53, 0, 0.749);
+    color: #607818;
+    text-transform: capitalize;
+    font-family: 'SF Pro Display';
+    font-weight: 600px;
+    padding: 8px 16px;
+    border: none;
+    height: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    /* width: 100%; */
   }
 
   .secondary-button {
@@ -67,10 +94,16 @@
 </style>
 
 <header class="app-bar">
-    <img src="{logo}" alt="logo" width="42px" height="42px"/>
+    <div class="container">
+        <!-- add link to home page to the image using <a> tag -->
+        <a href="/"><img src="{logo}" href= "/" alt="logo" width="42px" height="42px"/></a>
+        {#if showNameBar==true}
+        <input class= "inputbar" bind:value = {search} type="text" placeholder="Enter your Name" />
+        {/if}
+    </div>
     <div class = "container">
-        <button class="secondary-button">Contact</button>
-        <button class="secondary-button">Members</button>
+        <a href="/contact/"><button class="secondary-button">Contact</button></a>
+        <a href="/members/"><button class="secondary-button">Members</button></a> 
         <button class="primary-button" on:click={joinUsClick} target="_blank">Join Us</button>
     </div>
 </header>
