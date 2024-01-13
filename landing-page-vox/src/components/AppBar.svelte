@@ -2,12 +2,9 @@
     import logo from '../lib/images/logo.png'
     export let search;
     export let showNameBar = false;
+    export let showJoinUsButton = true;
     function joinUsClick() {
         window.open("https://tally.so/r/3qRxa5", "_blank");
-    }
-
-    function homeClick() {
-        window.open("", "_blank");
     }
 </script>
 <style>
@@ -16,7 +13,7 @@
         top: 5%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-color: rgba(0,0,0,0.2);
+        background-color: rgba(0,0,0,0.3);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         background-image: url('../lib/images/secondaryCardbg.png');
@@ -32,7 +29,7 @@
         justify-content: space-between  ;
         border-radius: 8px;
         border: #d4ea9948 1px solid;
-        z-index: 1;
+        /* z-index: 1; */
     }
 
     .container {
@@ -58,6 +55,8 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    position: sticky;
+    float: right;
   }
 
   .inputbar {
@@ -104,6 +103,8 @@
     <div class = "container">
         <a href="/contact/"><button class="secondary-button">Contact</button></a>
         <a href="/members/"><button class="secondary-button">Members</button></a> 
-        <button class="primary-button" on:click={joinUsClick} target="_blank">Join Us</button>
+        {#if showJoinUsButton==true}
+        <a href="/recruitment-form"><button class="primary-button">Join Us</button></a>
+        {/if}
     </div>
 </header>

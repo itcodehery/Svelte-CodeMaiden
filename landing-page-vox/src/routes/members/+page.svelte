@@ -1,5 +1,6 @@
 <script>
     import AppBar from "../../components/AppBar.svelte";
+    import Footer from "../../components/footer.svelte";
     import NumberCard from "../../components/numberCard.svelte";
     let memberCount = 0;
     let text = "members currently working on projects"
@@ -21,3 +22,6 @@
     <hr/>
     <NumberCard bind:number="{memberCount}" bind:text="{text}"/>
 </body>
+<footer>
+    <Footer/>
+</footer>

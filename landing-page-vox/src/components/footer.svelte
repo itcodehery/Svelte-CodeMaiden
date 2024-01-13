@@ -3,8 +3,11 @@
     import logo from '../lib/images/logo.png';
     const routes = [
         { name: 'Home', path: '/' },
-        { name: 'Members', path: '/about' },
-        { name: 'Contact', path: '/contact' }
+        { name: 'Members', path: '/members' },
+        { name: 'Contact', path: '/contact' },
+        { name: 'Products', path: '/products'},
+        { name: 'Join Us', path: '/join-us'},
+        { name: 'Hire Us', path: '/hire-us'}
     ];
 
     function navigateTo(path) {
@@ -23,7 +26,7 @@
             <button on:click={() => navigateTo(route.path)}>{route.name}</button>
         {/each}
     </div>
-    <p>Made with love by the souls @ The Vox Technologia Collective.</p>
+    <p>Made by Hari Prasad B K @ The Vox Technologia Collective.</p>
 </footer>
 
 <style>
@@ -56,6 +59,8 @@
         margin-right: 10px;
         background-color: transparent;
         color: #d3fd9d;
+        padding: 8px 16px;
+        border-radius: 4px;
         border: none;
         cursor: pointer;
         font-family: 'SF Pro Display';
@@ -64,7 +69,10 @@
     }
 
     .footer-buttons button:hover {
-        text-decoration: underline;
-        font-weight: bold;
+        color: #d3fd9d;
+        border-radius: 2px;
+        padding: 5px 14px;
+        border: #376200;
+        border-style: dashed;
     }
 </style>

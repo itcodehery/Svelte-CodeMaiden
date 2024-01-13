@@ -41,6 +41,7 @@ hr {
                         mainText = "This is for you 🫵 if:"
                         subText = "You are very passionate about technology, designing, marketing or coding, or you are currently doing a degree or course that is tech-related or incorporates tech, designing or coding in any way and you're open minded about meeting new people and forming collaborative groups with them. "/>
                         <hr/>
-
-                        <Footer/>
                         </body>
+                        <footer>
+                            <Footer/>
+                        </footer>
