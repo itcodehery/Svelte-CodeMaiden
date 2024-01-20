@@ -1,6 +1,4 @@
 <script>
-import AppBar from "../components/AppBar.svelte";
-    import Footer from "../components/footer.svelte";
 import MainCard from "../components/mainCard.svelte";
 import SecondaryCard from "../components/secondaryCard.svelte";
 import TertiaryCard from "../components/tertiaryCard.svelte";
@@ -16,8 +14,6 @@ hr {
 }
 </style>
 <body>
-
-    <AppBar showNameBar="{true}"  bind:search={name}/>
         <div style="height: 50px;">
 
         </div>
@@ -42,6 +38,3 @@ hr {
                         subText = "You are very passionate about technology, designing, marketing or coding, or you are currently doing a degree or course that is tech-related or incorporates tech, designing or coding in any way and you're open minded about meeting new people and forming collaborative groups with them. "/>
                         <hr/>
                         </body>
-                        <footer>
-                            <Footer/>
-                        </footer>

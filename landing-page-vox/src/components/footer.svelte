@@ -60,7 +60,6 @@
         background-color: transparent;
         color: #d3fd9d;
         padding: 8px 16px;
-        border-radius: 4px;
         border: none;
         cursor: pointer;
         font-family: 'SF Pro Display';
@@ -69,10 +68,6 @@
     }
 
     .footer-buttons button:hover {
-        color: #d3fd9d;
-        border-radius: 2px;
-        padding: 5px 14px;
-        border: #376200;
-        border-style: dashed;
+        text-decoration: underline 2px;
     }
 </style>

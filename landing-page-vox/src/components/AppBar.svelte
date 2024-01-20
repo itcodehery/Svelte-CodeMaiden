@@ -57,6 +57,7 @@
     cursor: pointer;
     position: sticky;
     float: right;
+    transition: background-color 0.3s ease-in-out;
   }
 
   .inputbar {
@@ -84,6 +85,7 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
   }
 
   .app-bar button:hover {
