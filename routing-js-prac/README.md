@@ -1,38 +1,19 @@
-# create-svelte
+# Svelte and Firebase Integration
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+## Introduction
+This is a practice repo for integrating Svelte and Firebase. The goal is to create a simple app that allows users to create, read, update, and delete (CRUD) data from a Firebase database. The app will be a simple to-do list.
 
-## Creating a project
+## Technologies
+- Svelte
+- Firebase
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Setup
+1. Create a new project in Firebase
+2. Create a new Svelte project
+3. Install Firebase dependencies
+4. Create a Firebase config file
+5. Create a Firebase service file
+6. Create a Firebase database
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+# Made By
+Hari Prasad
