@@ -1,6 +1,7 @@
 <script>
     //export form data to a json file
     import { onMount } from 'svelte';
+    import { page } from '$app/stores';
 
     onMount(() => {
         const form = document.querySelector('form');
@@ -16,7 +17,7 @@
                 },
                 body: JSON.stringify(data)
             }).then(() => {
-                alert('Form submitted successfully!');
+                window.location.href = $page.document + '/success';
             });
         });
     });
@@ -68,7 +69,6 @@
             alert('Please enter a valid email address.');
             return;
         }
-    window.location.href = '/success';
   };
 
 </script>
@@ -94,10 +94,10 @@
             <input type="text" id="name" name="name" required><br>
             
             <label for="email">Email:*</label>
-            <p class="secondary-text">Preferably your WhatsApp number</p>
             <input type="text" id="email" name="email" on:submit|preventDefault ={handleEmailInput} required><br>
 
             <label for="phone">Phone:*</label>
+            <p class="secondary-text">Preferably your WhatsApp number</p>
             <input type="text" id="phone" name="phone" value={phoneNumber} on:input={handlePhoneInput} required><br>
 
             <label for="techpassion">Are you passionate about any topic related to the Computer Industry? If so, tell us about it shortly:</label>
